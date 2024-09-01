@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction and About Farming</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        
+        .column {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        
+        .prediction-box h2, .about-box h2 {
+            text-align: center;
+        }
+        
+        .predict-btn {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        
+        .predict-btn:hover {
+            background-color: #218838;
+        }
+        
+        .crops-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        
+        .crops-btn:hover {
+            background-color: #0056b3;
+        }
+        
+        p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="predictor1.html">Predict</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="column prediction-box">
+                <h2>Prediction</h2>
+                <p>Rain prediction using machine learning involves analyzing inputs like temperature, humidity, and atmospheric pressure to forecast whether it will rain. By training models on historical weather data, the system learns patterns and makes accurate predictions about future rainfall events.</p>
+                <a href="/predict"><button class="predict-btn">Predict</button></a>
+            </div>
+            <div class="column about-box">
+                <h2>Types of crops</h2>
+                <p>Information about farming techniques, best practices, and more.</p>
+                <a href="crops.html"><button class="crops-btn">Learn More</button></a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
