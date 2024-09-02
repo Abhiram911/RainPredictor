@@ -25,7 +25,7 @@ def home():
 
 @app.route("/predict", methods=['GET', 'POST'])
 @cross_origin()
-def predict():
+def make_prediction():
     if request.method == "POST":
         try:
             # DATE
@@ -50,6 +50,8 @@ def predict():
             if rainfall is None or rainfall == '':
                 return "Error: 'rainfall' field is required."
             rainfall = float(rainfall)
+
+            # Remaining inputs
             evaporation = float(request.form.get('evaporation', 0))
             sunshine = float(request.form.get('sunshine', 0))
             windGustSpeed = float(request.form.get('windgustspeed', 0))
@@ -80,9 +82,11 @@ def predict():
             # Predict the result using the loaded model
             pred = model.predict(input_array)[0]
 
-            # Return result
-            prediction_text = "Rainy" if pred == 1 else "Sunny"
-            return render_template("predictor1.html", prediction=prediction_text)
+            # Render the appropriate template based on prediction
+            if pred == 1:
+                return render_template("Rainy.html")
+            else:
+                return render_template("sunny.html")
 
         except Exception as e:
             return f"An error occurred: {str(e)}"
